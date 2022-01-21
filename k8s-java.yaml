@@ -1,0 +1,3 @@
+@Library('jenkins-shared-library)
+gcpJavaBuildPipeline([name: 'email-center-api', containerType: 'amazoncorretto11', 'buildDockerWithGradle': true,
+    'publishHelm':true, 'helmChartPattern': 'email-center-api*.tgz', 'helmDir': 'helm'])
